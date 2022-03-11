@@ -25,7 +25,7 @@ contract AvaxPrice {
         return _price;
     }
 
-    function convertCurrency(int256 _usdAmount) public view returns (int256) {
+    function convertCurrency(int256 _usdAmount) public view returns (int256, int256) {
         (
             /*uint80 roundID*/,
             int256 _price,
@@ -33,8 +33,8 @@ contract AvaxPrice {
             /*uint timeStamp*/,
             /*uint80 answeredInRound*/
         ) = priceFeed.latestRoundData();
-        int256 avaxAmount = _usdAmount.div(_price);
-        return avaxAmount;
+        int256 avaxAmount = _usdAmount.mul(10 ** 16).div(_price);
+        return (avaxAmount, 10 ** 8);
     }
 
 }
