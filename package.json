@@ -1,0 +1,7 @@
+{
+  "name": "avax-currency-converter-contract-using-chainlink-oracle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.aa:bcExpt1123/avax-currency-converter-contract-using-chainlink-oracle.git",
+  "license": "MIT"
+}
